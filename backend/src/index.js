@@ -3,6 +3,9 @@ const pool = require("./db");
 
 const app = express()
 
+const userRouter = require("./Routes/userRoutes")
+
+
 app.get('/', (req, res) => {
     res.status(200).send("Docker is easy 🐬")
 })
@@ -16,6 +19,9 @@ app.get("/person", async (req, res) => {
         res.status(500).send("Server Error");
     }
 });
+
+app.use(userRouter)
+
 
 const port = process.env.port || 8080;
 
