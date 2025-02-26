@@ -5,6 +5,7 @@ const app = express()
 
 const userRouter = require("./Routes/userRoutes")
 
+app.use(express.json())
 
 app.get('/', (req, res) => {
     res.status(200).send("Docker is easy 🐬")
