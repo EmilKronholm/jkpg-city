@@ -1,25 +1,25 @@
-const fs = require('fs');
+require("dotenv").config();
+const { Pool } = require("pg");
 
-const data = fs.readFileSync('data.json', 'utf8');
-const jsonData = JSON.parse(data);
+const pool = new Pool({
+    user: process.env.DB_USER,
+    host: "localhost",
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
+    password: process.env.DB_PASSWORD
+});
 
-const uniqueTags = jsonData.reduce((acc, item) => {
-    // console.log(item)
-    if (!acc.includes(item.district)) {
-        acc.push(item.district);
-    }
-    return acc;
-}, []);
-
-console.log(uniqueTags);
-
-/*
-[
-  'Öster',
-  null,
-  'Väster',
-  'Tändsticksområdet',
-  'Atollen',
-  'Resecentrum'
+const uniqueTags = [
+	'Öster',
+	null,
+	'Väster',
+	'Tändsticksområdet',
+	'Atollen',
+	'Resecentrum'
 ]
-*/
+
+uniqueTags.forEach((x) => {
+    if (!x) return;
+	console.log(`${x}`)
+    pool.query(`INSERT INTO district (create_time, name) VALUES (NOW(), $1)`, [x]);
+});
