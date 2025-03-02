@@ -5,16 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emil</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <header>
+        <menu>
+            <ul>
+                <li>Home</li>
+                <li>Find activity</li>
+                <li>All stores A-Ö</li>
+                <li>Search...</li>
+            </ul>
+        </menu>
+
+        <section>
+            <h2>A complete list of vendors</h2>
+            <h1>Jönköping City</h1>
+            <h3>An unofficial project by Emil Kronholm</h3>
+        </section>
+    </header>
+
     <h1>Hello, World!</h1>
-    <script>
-        fetch("http://localhost:3000")
-            .then(response => response.text())
-            .then(data => console.log(data))
-            .catch(error => console.error("Error:", error));
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
