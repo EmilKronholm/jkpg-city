@@ -12,6 +12,16 @@ services:
       - ./backend:/app
       - /app/node_modules
 
+  frontend:
+    image: nginx
+    container_name: frontend
+    ports:
+      - "3001:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
+
   postgres:
     image: postgres
     container_name: my_postgres
