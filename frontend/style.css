@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+    background-image: url("./images/jkpg-city-sky.jpg");
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10%;
+}
+
+header menu {
+
+}
+
+header menu ul {
+    color: white;
+    display: inline-flex;    
+    list-style: none;
+}
+
+header menu ul li {
+    padding-right: 30px;
+}
+
+header {
+    display: grid
+}
