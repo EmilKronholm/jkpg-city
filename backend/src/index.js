@@ -1,15 +1,20 @@
 const express = require('express')
 const pool = require("./db");
 
-const app = express()
+const app = express();
 
-const userRouter = require("./Routes/userRoutes")
+
+const cors = require('cors')
+app.use(cors({ origin: "http://localhost:3001" }));
+
+const userRouter = require("./Routes/userRoutes");
+const vendorRouter = require("./Routes/vendorRoutes");
 
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.status(200).send("Docker is easy 🐬")
-})
+    res.status(200).json("Successfully connected to JKPG-CITY api 🚀");
+});
 
 app.get("/person", async (req, res) => {
     try {
@@ -21,11 +26,11 @@ app.get("/person", async (req, res) => {
     }
 });
 
-app.use(userRouter)
-
+app.use(userRouter);
+app.use(vendorRouter);
 
 const port = process.env.port || 8080;
 
 app.listen(port, () => {
-    console.log(`App listening on http://localhost:${8080}`)
+    console.log(`App listening on http://localhost:${8080}`);
 })
