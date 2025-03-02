@@ -8,29 +8,56 @@
 }
 
 header {
-    padding: 0;
-    margin: 0;
-    background-image: url("./images/jkpg-city-sky.jpg");
     height: 60vh;
+
+    background: linear-gradient(rgba(215, 131, 131, 0.5), rgba(0, 0, 0, 0.5)),
+        url("./images/jkpg-city-sky.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10%;
+
+    color: white;
+    display: grid;
+
+    padding: 50px;
 }
 
 header menu {
-
+    justify-content: right;
+    margin-left: auto;
 }
 
 header menu ul {
     color: white;
-    display: inline-flex;    
+    display: inline-flex;
     list-style: none;
+
+    justify-content: left;
+    text-align: right;
 }
 
 header menu ul li {
     padding-right: 30px;
 }
 
-header {
-    display: grid
+header menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header menu ul li a:hover {
+    color: rgb(220, 220, 220);
+}
+
+header section h2 {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+header section h1 {
+    font-size: 100px;
+}
+
+header section h3 {
+    font-weight: 400;
 }
