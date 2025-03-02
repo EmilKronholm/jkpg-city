@@ -3,7 +3,6 @@ const pool = require("./../db")
 class VendorServices {
     static async getAllVendors(limit = 5, offset = 0) {
         limit = (limit > 50) ? 50 : limit;
-        
         return await pool.query(query.getAllVendors, [limit, offset]);
     }
     
@@ -17,32 +16,26 @@ class VendorServices {
 }
 
 class query {
-    static getAllVendors() {
-        return `
+    static getAllVendors = `
         SELECT *
         FROM vendors
         LIMIT $1 OFFSET $2
-        `
-    }
+        `;
 
-    static getVendor() {
-        return `
+    static getVendor = `
         SELECT *
         FROM vendors
         WHERE id = $1
-        `
-    }
+        `;
 
-    static updatePasswordForUser() {
-        return `
+    static updatePasswordForUser = `
         UPDATE users
         SET 
-            url = $2as,
+            url = $2,
             name = $3,
             districtFK = $4
         WHERE id = $1 
-        `
-    }
+        `;
 }
 
 module.exports = VendorServices
