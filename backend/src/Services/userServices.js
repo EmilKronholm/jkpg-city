@@ -4,7 +4,7 @@ class UserServices {
     static async getAllUsers(limit = 5, offset = 0) {
         limit = (limit > 50) ? 50 : limit;
 
-        return await pool.query(query.getAllUsers, [limit, offset]);
+        return (await pool.query(query.getAllUsers, [limit, offset])).rows;
     }
 
     static async getUser(id) {
@@ -16,9 +16,7 @@ class UserServices {
     }
 
     static async createNewUser(username, password) {
-        console.log(1)
-        const result = await pool.query("select version()", [username, password]);
-        console.log(result)
+        const result = await pool.query(query.createNewUser, [username, password])
         return result;
     }
 
@@ -28,45 +26,35 @@ class UserServices {
 }
 
 class query {
-    static getAllUsers() {
-        return `
+    static getAllUsers = `
         SELECT *
         FROM users
         LIMIT $1 OFFSET $2
-        `
-    }
+        `;
 
-    static getUser() {
-        return `
+    static getUser = `
         SELECT *
         FROM users
         WHERE id = $1
-        `
-    }
+        `;
 
-    static getUserByUsername() {
-        return `
+    static getUserByUsername = `
         SELECT *
         FROM users
         WHERE username = $1
-        `
-    }
+        `;
 
-    static updatePasswordForUser() {
-        return `
+    static updatePasswordForUser = `
         UPDATE users
         SET password = $2
         WHERE id = $1 
-        `
-    }
+        `;
 
-    static createNewUser() {
-        return `
+    static createNewUser = `
         INSERT INTO users
-        (username, password)
-        VALUES ($1, $2)        
-        `
-    }
+        (create_time, username, password)
+        VALUES (NOW(), $1, $2)        
+        `;
 }
 
 module.exports = UserServices
