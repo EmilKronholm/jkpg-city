@@ -4,7 +4,12 @@ const VendorServices = require("./../Services/vendorServices")
 
 // List all vendors
 router.get('/vendors', async (req, res) => {
-    const vendorJSON = await VendorServices.getAllVendors();
+    const limit = req.query.limit || 5;
+    const offset = req.query.offset || 0;
+
+    console.log(limit, offset);
+
+    const vendorJSON = await VendorServices.getAllVendors(limit, offset);
     res.status(200).json(vendorJSON);
 });
 
