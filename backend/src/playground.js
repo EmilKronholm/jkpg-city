@@ -3,6 +3,7 @@ const { Pool } = require("pg");
 const fs = require('fs');
 const { rawListeners } = require("process");
 const { json } = require("stream/consumers");
+const { create } = require("domain");
 
 const data = fs.readFileSync('./src/data.json')
 const jsonData = JSON.parse(data);
@@ -33,10 +34,10 @@ const createTags = () => {
 };
 
 const createVendors = () => {
-    // console.log(jsonData);
+    console.log(jsonData);
     jsonData.forEach(async (vendor) => {
-        // console.log("\n \n Nu kör vi:")
-        // console.log(vendor)
+        console.log("\n \n Nu kör vi:")
+        console.log(vendor)
         const name = vendor.name
         const url = vendor.url
         let districtFK = uniqueTags.indexOf(vendor.district) + 1;
@@ -45,10 +46,11 @@ const createVendors = () => {
             console.log(vendor)
         }
 
-        // await pool.query(`INSERT INTO vendors (name, url, districtFK) values
-        // ($1, $2, $3)`, [name, url, districtFK]);
+        await pool.query(`INSERT INTO vendors (name, url, districtFK) values
+        ($1, $2, $3)`, [name, url, districtFK]);
     });
 }
+// createTags();
 createVendors();
 
 // console.log(Object.keys(jsonData).length)
