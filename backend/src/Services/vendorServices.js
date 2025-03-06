@@ -1,13 +1,19 @@
 const pool = require("./../db")
 
 class VendorServices {
-    static async getAllVendors(limit = 5, offset = 0) {
-        const maxLimit = 50;
+    static async getAllVendors(limit = 5, offset = 0, search = "") {
+        const maxLimit = 200;
         limit = (limit > maxLimit) ? maxLimit : limit;
-        return (await pool.query(query.getAllVendors, [limit, offset])).rows;
+        if (search === "")
+            return (await pool.query(query.getAllVendors, [limit, offset])).rows;
+        else {
+            console.log(search)
+            return (await pool.query(query.getAllVendorsWithSearch, [limit, offset, search])).rows;
+        }
     }
 
     static async getVendor(id) {
+        console.log(id)
         return (await pool.query(query.getVendor, [id])).rows;
     }
 
@@ -24,10 +30,19 @@ class query {
         LIMIT $1 OFFSET $2
         `;
 
-    static getVendor = `
+        static getAllVendorsWithSearch = `
         SELECT *
         FROM vendors
-        WHERE id = $1
+        WHERE name LIKE '%' || $3 || '%'
+        ORDER BY name
+        LIMIT $1 OFFSET $2
+
+        `;
+    static getVendor = `
+        SELECT vendor.create_time, vendor.deleted_at, vendor.name, vendor.url, district.name AS district 
+        FROM vendors AS vendor 
+        INNER JOIN district ON vendor.districtfk = district.id
+        WHERE vendor.id = $1
         `;
 
     static updatePasswordForUser = `
