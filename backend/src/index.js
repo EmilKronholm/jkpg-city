@@ -11,6 +11,7 @@ app.use(express.json())
 
 const userRouter = require("./Routes/userRoutes");
 const vendorRouter = require("./Routes/vendorRoutes");
+const loginRouter = require("./Routes/loginRoutes");
 
 
 app.get('/', (req, res) => {
@@ -27,8 +28,6 @@ app.get("/person", async (req, res) => {
     }
 });
 
-
-
 app.get("/auth", (req, res) => {
     res.status(403).send("NOOO")
     // res.status(200).send("OKKKKK")
@@ -36,6 +35,7 @@ app.get("/auth", (req, res) => {
 
 app.use(userRouter);
 app.use(vendorRouter);
+app.use(loginRouter);
 
 const port = process.env.port || 8080;
 
