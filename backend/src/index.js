@@ -7,7 +7,7 @@ const app = express();
 const cors = require('cors')
 app.use(cors({ origin: "http://localhost:3001" }));
 
-app.use(express.json())
+app.use(express.json());
 
 const userRouter = require("./Routes/userRoutes");
 const vendorRouter = require("./Routes/vendorRoutes");
@@ -32,7 +32,7 @@ app.get("/person", async (req, res) => {
 app.get("/auth", (req, res) => {
     res.status(403).send("NOOO")
     // res.status(200).send("OKKKKK")
-})
+});
 
 app.use(userRouter);
 app.use(vendorRouter);
@@ -41,4 +41,4 @@ const port = process.env.port || 8080;
 
 app.listen(port, () => {
     console.log(`App listening on http://localhost:${8080}`);
-})
+});
