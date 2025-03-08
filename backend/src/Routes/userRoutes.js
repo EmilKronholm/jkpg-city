@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const UserServices = require("./../Services/userServices")
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
 
 // List all users
 router.get('/users', async (req, res) => {
@@ -21,10 +21,12 @@ router.post('/users', async (req, res) => {
     const { username, password } = req.body
     console.log(`New user requested with U: ${username} & P: ${password}`);
 
-    //todo implement hashing with bcrypt
-    const hashedPassword = password
-    
+    if (UserServices.getUserByUsername(username)[0] !== undefined) {
+        res.status(400).json({ message: "A user already exists with that username." })
+        return;
+    }
 
+    const hashedPassword = await bcrypt(password, 10);
 
     const result = await UserServices.createNewUser(username, hashedPassword);
     console.log(result)
@@ -51,7 +53,7 @@ router.post('/users/logout', (req, res) => {
 
 // Updates password for current user. Old and new password should be passed via body.
 router.put('/users/update-password', (req, res) => {
-    
+
 });
 
 module.exports = router;
