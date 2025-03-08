@@ -1,10 +1,18 @@
 const express = require("express")
 const router = express.Router()
 const UserServices = require("./../Services/userServices")
+const bcrypt = require('bcrypt');
 
 // List all users
 router.get('/users', async (req, res) => {
     const userJSON = await UserServices.getAllUsers();
+    res.status(200).json(userJSON);
+});
+
+// Get user by ID
+router.get('/users/:id', async (req, res) => {
+    const id = req.params.id || 0;
+    const userJSON = await UserServices.getUser(id);
     res.status(200).json(userJSON);
 });
 
@@ -15,7 +23,9 @@ router.post('/users', async (req, res) => {
 
     //todo implement hashing with bcrypt
     const hashedPassword = password
-    console.log(0)
+    
+
+
     const result = await UserServices.createNewUser(username, hashedPassword);
     console.log(result)
     res.status(200).json("OK")

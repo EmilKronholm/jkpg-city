@@ -1,5 +1,7 @@
 const express = require('express')
 const pool = require("./db");
+const cookieParser = require('cookie-parser');
+
 
 const app = express();
 
@@ -8,11 +10,11 @@ const cors = require('cors')
 app.use(cors({ origin: "http://localhost:3001" }));
 
 app.use(express.json());
+app.use(cookieParser())
 
 const userRouter = require("./Routes/userRoutes");
 const vendorRouter = require("./Routes/vendorRoutes");
 const loginRouter = require("./Routes/loginRoutes");
-
 
 app.get('/', (req, res) => {
     res.status(200).json("Successfully connected to JKPG-CITY api 🚀");
@@ -28,10 +30,10 @@ app.get("/person", async (req, res) => {
     }
 });
 
-app.get("/auth", (req, res) => {
-    res.status(403).send("NOOO")
-    // res.status(200).send("OKKKKK")
-});
+// app.get("/auth", (req, res) => {
+//     //     res.status(403).send("NOOO")
+//     //     // res.status(200).send("OKKKKK")
+//     // });
 
 app.use(userRouter);
 app.use(vendorRouter);

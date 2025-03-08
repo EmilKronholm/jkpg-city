@@ -8,20 +8,20 @@ class UserServices {
     }
 
     static async getUser(id) {
-        return (await pool.query(query.getUser, [id])).rows;
+        return await pool.query(query.getUser, [id]);
     }
 
-    static async updateHashedPasswordForUser(id, password) {
-        (await pool.query(query.updateHashedPasswordForUser, [id, password])).rows;
+    static async updatePasswordForUser(id, password) {
+        await pool.query(query.updatePasswordForUser, [id, password]);
     }
 
     static async createNewUser(username, password) {
-        const result = (await pool.query(query.createNewUser, [username, password])).rows
+        const result = await pool.query(query.createNewUser, [username, password])
         return result;
     }
 
     static async getUserByUsername(username) {
-        (await pool.query(query.getUserByUsername, [username])).rows
+        await pool.query(query.getUserByUsername, [username])
     }
 }
 
@@ -44,15 +44,15 @@ class query {
         WHERE username = $1
         `;
 
-    static updateHashedPasswordForUser = `
+    static updatePasswordForUser = `
         UPDATE users
-        SET hashedPassword = $2
+        SET password = $2
         WHERE id = $1 
         `;
 
     static createNewUser = `
         INSERT INTO users
-        (create_time, username, hashedPassword)
+        (create_time, username, password)
         VALUES (NOW(), $1, $2)        
         `;
 }
