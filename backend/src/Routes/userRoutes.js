@@ -26,7 +26,13 @@ router.post('/users', async (req, res) => {
         return;
     }
 
-    const hashedPassword = await bcrypt(password, 10);
+    if (username === undefined || password === undefined) {
+        res.status(400).json({ message: "Username or password wasn't passed correctly." })
+    }
+
+    const saltRounds = 10;
+    console.log(password)
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
 
     const result = await UserServices.createNewUser(username, hashedPassword);
     console.log(result)

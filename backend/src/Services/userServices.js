@@ -52,7 +52,7 @@ class query {
 
     static createNewUser = `
         INSERT INTO users
-        (create_time, username, hashedPassword)
+        (create_time, username, hashed_password)
         VALUES (NOW(), $1, $2)        
         `;
 }
