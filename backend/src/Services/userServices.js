@@ -21,7 +21,7 @@ class UserServices {
     }
 
     static async getUserByUsername(username) {
-        (await pool.query(query.getUserByUsername, [username])).rows
+        return (await pool.query(query.getUserByUsername, [username])).rows
     }
 }
 

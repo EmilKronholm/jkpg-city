@@ -7,7 +7,7 @@ const app = express();
 
 
 const cors = require('cors')
-app.use(cors({ origin: "http://localhost:3001" }));
+app.use(cors({ origin: "http://localhost:3001", credentials: true }));
 
 app.use(express.json());
 app.use(cookieParser())
