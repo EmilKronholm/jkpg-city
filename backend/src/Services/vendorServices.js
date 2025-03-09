@@ -39,9 +39,9 @@ class query {
 
         `;
     static getVendor = `
-        SELECT vendor.create_time, vendor.deleted_at, vendor.name, vendor.url, district.name AS district 
+        SELECT vendor.create_time, vendor.delete_time, vendor.name, vendor.url, district.name AS district 
         FROM vendors AS vendor 
-        INNER JOIN district ON vendor.districtfk = district.id
+        LEFT JOIN district ON vendor.districtfk = district.id
         WHERE vendor.id = $1
         `;
 

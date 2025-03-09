@@ -23,7 +23,7 @@ function appendVendor(vendor) {
     const li = document.createElement("li");
 
     const a = document.createElement("a");
-    a.setAttribute("href", `./vendor.html?vendorID=${vendor.id}`);
+    a.setAttribute("href", `./vendor?vendorID=${vendor.id}`);
     a.textContent = vendor.name;
     li.appendChild(a);
     ul.appendChild(li);
@@ -41,6 +41,8 @@ async function fetchVendorsFromAPI(limit = 5, offset = 0) {
 
 async function main() {
     const vendors = await fetchVendorsFromAPI(200, 0);
+
+    console.log(vendors)
 
     for (const key in vendors) {
         let vendor = vendors[key];

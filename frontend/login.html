@@ -35,19 +35,20 @@
             commodo consequat.</p>
     </section> -->
 
+    <section id="login-section">
+        <h2>Log in</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
 
-    <input type="text" placeholder="Search vendors..." id="search-input">
-    <button id="search-submit" onClick="search()">Search</button>
-
-    <section id="all-vendors">
-        <h4>All stores A-Ö</h4>
-        <ul>
-        </ul>
+        <h3 id="message"></h3>
     </section>
-    
-
-
-    <script src="script.js"></script>
+    <script src="login-script.js"></script>
+    <script src="isLoggedIn.js"></script>
 </body>
 
 </html>

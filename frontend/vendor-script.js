@@ -52,7 +52,7 @@ async function main() {
 
     // Create the district
     const p = document.createElement('p');
-    p.textContent = store.district;
+    p.textContent = store.district || "Unkown district";
     
     // Finaliez the creation 
     vendorDIV.appendChild(h2);
@@ -62,4 +62,3 @@ async function main() {
     vendorSection.appendChild(vendorDIV);  
 }
 main();
-

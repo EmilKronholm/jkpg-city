@@ -79,7 +79,8 @@ router.post('/users/login', async (req, res) => {
 
 // Log out current user 
 router.post('/users/logout', (req, res) => {
-    //Todo: destroy session
+    res.clearCookie('auth_token', { httpOnly: true, secure: false, sameSite: 'strict' });
+    res.status(200).json({ message: 'Logged out' });
 });
 
 // Updates password for current user. Old and new password should be passed via body.
