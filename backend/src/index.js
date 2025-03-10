@@ -5,7 +5,6 @@ const cookieParser = require('cookie-parser');
 
 const app = express();
 
-
 const cors = require('cors')
 app.use(cors({ origin: "http://localhost:3001", credentials: true }));
 
@@ -14,7 +13,7 @@ app.use(cookieParser())
 
 const userRouter = require("./Routes/userRoutes");
 const vendorRouter = require("./Routes/vendorRoutes");
-const loginRouter = require("./Routes/loginRoutes");
+const { router: loginRouter } = require("./Routes/loginRoutes");
 
 app.get('/', (req, res) => {
     res.status(200).json("Successfully connected to JKPG-CITY api 🚀");

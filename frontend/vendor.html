@@ -42,6 +42,28 @@
         </div> -->
     </section>
 
+    <button id="edit-vendor-button">Edit Vendor ✏️</button>
+
+    <!-- Initialized as none, later this will act as a popup. -->
+    <div id="overlay">
+        <div id="popup">
+            <button id="close-edit-vendor-button">Close</button>
+            <h2>Update Vendor</h2>
+            <form id="updateForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="" required><br>
+
+                <label for="url">URL:</label>
+                <input type="text" id="url" name="url" value="" required><br>
+
+                <label for="districtfk">District:</label>
+                <input type="text" id="districtfk" name="districtfk"><br>
+
+                <button type="submit">Update Vendor</button>
+            </form>
+        </div>
+    </div>
+
     <script src="vendor-script.js"></script>
 </body>
 

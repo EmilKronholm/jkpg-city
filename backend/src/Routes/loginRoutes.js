@@ -45,4 +45,4 @@ router.get("/auth", authenticateJWT, (req, res) => {
     res.status(200).json({ message: `Hello ${req.user}, you are authenticated!` });
 });
 
-module.exports = router
+module.exports = { router, authenticateJWT }

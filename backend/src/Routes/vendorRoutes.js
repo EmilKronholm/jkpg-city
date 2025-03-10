@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const VendorServices = require("./../Services/vendorServices")
+const { authenticateJWT } = require('./loginRoutes')
 
 // List all vendors
 router.get('/vendors', async (req, res) => {
@@ -23,9 +24,28 @@ router.get('/vendors/:id', async (req, res) => {
 });
 
 // Update vendor. ID via query and new field passed via body (json)
-router.put('/vendors/:id', async (req, res) => {
-    const { id, url, name, districtFK } = req.body;
+router.put('/vendors/:id', authenticateJWT, async (req, res) => {
+    const { id, url, name, districtFK } = req.body || null;
     const result = await VendorServices.updateVendor(id, url, name, districtFK);
+    return res.status(200).json(result);
+});
+
+router.post('/vendors', authenticateJWT, async (req, res) => {
+    const { url, name, districtFK } = req.body || null;
+
+    await VendorServices.createVendor(url, name, districtFK);
+    res.status(200).json({ message: "Vendor was created successfully." });  
+});
+
+// Delete vendor with id
+router.put('/vendors/:id', authenticateJWT, async (req, res) => {
+    const id = req.params.id
+
+    if (id === undefined) {
+        return res.status(400).json({ message: "ID wasn't passed correctly" });
+    }
+
+    const result = await VendorServices.deleteVendor(id);
     return res.status(200).json(result);
 });
 

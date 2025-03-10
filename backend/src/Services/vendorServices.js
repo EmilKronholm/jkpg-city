@@ -18,7 +18,15 @@ class VendorServices {
     }
 
     static async updateVendor(id, url, name, districtFK) {
-        (await pool.query(query.updatePasswordForUser, [id, url, name, districtFK])).rows;
+        (await pool.query(query.updateVendor, [url, name, districtFK])).rows;
+    }
+
+    static async createVendor(url, name, district) {
+        (await pool.query(query.createVendor, [url, name, district])).rows;
+    }
+
+    static async deleteVendor(id) {
+        await pool.query(query.createVendor, [id])
     }
 }
 
@@ -45,14 +53,30 @@ class query {
         WHERE vendor.id = $1
         `;
 
-    static updatePasswordForUser = `
-        UPDATE users
+    static updateVendor = `
+        UPDATE vendors
         SET 
             url = $2,
             name = $3,
             districtFK = $4
         WHERE id = $1 
         `;
+
+    static createVendor = `
+        INSERT INTO vendors
+        (create_time, delete_time, name, url, districtFK)
+        VALUES
+        (NOW(), null, $1, $2, COALESCE(
+            (SELECT id FROM district WHERE LOWER(name) = LOWER($3))
+        ))
+    `;
+
+    static deleteVendor = `
+        UPDATE vendors
+        SET
+            delete_time = NOW()
+        WHERE id = $1
+    `;
 }
 
 module.exports = VendorServices

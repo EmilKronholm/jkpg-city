@@ -8,7 +8,6 @@ const { create } = require("domain");
 const data = fs.readFileSync('./src/data.json')
 const jsonData = JSON.parse(data);
 
-
 const pool = new Pool({
     user: process.env.DB_USER,
     host: "localhost",
