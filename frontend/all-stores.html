@@ -13,10 +13,9 @@
     <header>
         <menu>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Find activity</a></li>
-                <li><a href="">All stores A-Ö</a></li>
-                <li><a href="">Search...</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="all-stores">All stores A-Ö</a></li>
+                <li><a id="menu-login" href="login">Login</a></li>
             </ul>
         </menu>
 
@@ -27,27 +26,41 @@
         </section>
     </header>
 
-    <!-- <section>
+    <!-- <section>§§
         <h4>Welcome to Jönköping City!</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat.</p>
     </section> -->
 
-    <section id="vendor">
-        <!-- <div>
-            <h2>Sample vendor name</h2>
-            <a href="http://example.com">Offical website</a>
-            <p>Sample district</p>
-        </div> -->
+    <section id="content">
+        <section id="content-menu">
+            <input type="text" placeholder="Search vendors..." id="search-input" onkeypress="searchKeyPress(event)"
+                onkeydown="search()" onchange="search()">
+            <button id="clear-search" onClick="search()">Clear</button>
+
+            <label for="options">Sort on:</label>
+            <select id="options" name="options">
+                <option value="sort-recent">Recent</option>
+                <option value="sort-oldest">Oldest</option>
+                <option value="sort-alphabetic-asc">Alphabetic order A-Ö</option>
+                <option value="sort-alphabetic-desc">Alphabetic order Ö-A</option>
+            </select>
+
+            <button id="create-vendor-button">Create vendor</button>
+        </section>
+
+        <section id="all-vendors">
+            <h4>All stores A-Ö</h4>
+            <ul>
+            </ul>
+        </section>
     </section>
 
-    <button id="edit-vendor-button">Edit Vendor ✏️</button>
 
-    <!-- Initialized as none, later this will act as a popup. -->
     <div id="overlay">
         <div id="popup">
-            <button id="close-edit-vendor-button">Close</button>
+            <button id="close-create-vendor-button">Close</button>
             <h2>Update Vendor</h2>
             <form id="updateForm">
                 <label for="name">Name:</label>
@@ -64,8 +77,10 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
-    <script src="vendor-script.js"></script>
+    <script src="main.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="isLoggedIn.js" defer></script>
+    <script src="createNewVendor.js" defer></script>
 </body>
 
 </html>

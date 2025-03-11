@@ -1,5 +1,3 @@
-const apiURL = "http://localhost:3000";
-
 async function logIn() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -39,7 +37,9 @@ function onLoginSucess() {
 
 function reset() {
     const message = document.getElementById('message');
-    message.innerHTML = "";
+    if (message) {
+        message.innerHTML = "";
+    }
 }
 
 reset();

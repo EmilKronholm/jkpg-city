@@ -1,16 +1,13 @@
-const apiURL = "http://localhost:3000"
-
-// Test ping
-// fetch("http://localhost:3000")
-//             .then(response => response.text())
-//             .then(data => console.log(data))
-//             .catch(error => console.error("Error:", error));
-
-
 function getSearch() {
     const urlParams = new URLSearchParams(window.location.search);
     const param = urlParams.get('search');
     return param || "";
+}
+
+function getOrder() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const param = urlParams.get('order');
+    return param || 'alphabetic-desc';
 }
 
 function getVendorMockData() {
@@ -31,22 +28,24 @@ function appendVendor(vendor) {
 
 // appendVendor(getVendorMockData());
 async function fetchVendorsFromAPI(limit = 5, offset = 0) {
-    const search = getSearch()
+    const search = getSearch();
+    const order = getOrder();
     console.log("test", search)
-    const result = await fetch(`${apiURL}/vendors?limit=${limit}&search=${search}`);
+    const result = await fetch(`${apiURL}/vendors?limit=${limit}&search=${search}&order=${order}`);
     const json = await result.json();
     return json;
 }
 
-async function main() {
-    const vendors = await fetchVendorsFromAPI(200, 0);
-
-    console.log(vendors)
-
+function appendVendors(vendors) {
     for (const key in vendors) {
         let vendor = vendors[key];
         appendVendor(vendor);
     }
+}
+
+async function main() {
+    const vendors = await fetchVendorsFromAPI(200, 0);
+    appendVendors(vendors)
 }
 
 main();
@@ -54,6 +53,7 @@ main();
 function searchKeyPress(event) {
     console.log("test")
     if (event.key === "Enter" || event.key == "Backspace") {
+        event.preventDefault();
         search();
     }
 }
@@ -65,17 +65,59 @@ function clearSearch() {
 
 function search() {
 
+    // Get search input
     const searchInput = document.getElementById('search-input');
     const searchPhrase = searchInput.value;
     search.value = "";
 
+    // Update URL params
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set('search', searchPhrase);
     window.history.replaceState(null, null, "?" + urlParams.toString());
 
-    ul.innerHTML = ""
-    const li = document.createElement('h3')
-    li.textContent = "Showing results for " + searchPhrase
-    ul.appendChild(li)
-    main()
+    // Clear vendors
+    ul.innerHTML = "";
+
+    // Search results heading
+    // const li = document.createElement('h3');
+    // li.textContent = "Showing results for " + searchPhrase;
+    // ul.appendChild(li);
+
+    // Build vendors
+    main();
 }
+
+document.getElementById('options').addEventListener('change', (event) => {
+    const selectedOption = event.target.value;
+    let orderValue = ""
+
+    switch (selectedOption) {
+        case 'sort-recent':
+            console.log("Sorting by recent");
+            orderValue = 'recent';
+            break;
+        case 'sort-oldest':
+            console.log("Sorting by oldest");
+            orderValue = 'oldest';
+            break;
+        case 'sort-alphabetic-desc':
+            console.log("Sorting alphabetically descending");
+            orderValue = 'alphabetic-desc';
+            break;
+        case 'sort-alphabetic-asc':
+            console.log("Sorting alphabetically ascending");
+            orderValue = 'alphabetic-asc';
+            break;
+        default:
+            console.log("Default sorting");
+            orderValue = 'alphabetic-desc';
+            break;
+    }
+
+    // Update URL params
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('order', orderValue);
+    window.history.replaceState(null, null, "?" + urlParams.toString());
+
+    search();
+});

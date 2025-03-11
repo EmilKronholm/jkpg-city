@@ -9,10 +9,11 @@ router.get('/vendors', async (req, res) => {
     const offset = req.query.offset || 0;
 
     const search = req.query.search || "";
+    const order = req.query.order;
 
-    console.log(limit, offset, search);
+    console.log("Get all vendors:", limit, offset, search, order);
 
-    const vendorJSON = await VendorServices.getAllVendors(limit, offset, search);
+    const vendorJSON = await VendorServices.getAllVendors(limit, offset, search, order);
     return res.status(200).json(vendorJSON);
 });
 

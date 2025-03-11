@@ -1,5 +1,3 @@
-const apiURL = "http://localhost:3000";
-
 function getID() {
     const urlParams = new URLSearchParams(window.location.search);
     const param = urlParams.get('vendorID');

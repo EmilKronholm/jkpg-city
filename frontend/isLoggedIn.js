@@ -1,47 +1,62 @@
+// GLOBAL
+const menuItem = document.getElementById('menu-login');
+
+// FUNCTIONS
+
 async function isLoggedIn() {
     try {
         const response = await fetch(`${apiURL}/auth`, { credentials: 'include' });
-        console.log(response);
-        return response.ok;
+        const loggedIn = response.ok;
+        localStorage.setItem("isLoggedIn", loggedIn ? "true" : "false");
+        return loggedIn;
     } catch (error) {
         console.error("Error checking login status");
-        return false;
+        return localStorage.getItem("isLoggedIn") === "true";
     }
 }
 
+function updateMenu() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
-function setLogout() {
-    const menuItem = document.getElementById('menu-login');
-    menuItem.innerHTML = "Logout";
-    menuItem.setAttribute('href', "");
-    menuItem.addEventListener("click", (event) => {
-        event.preventDefault()
-        logout();
-    });
-}
-
-function setLogin() {
-    const menuItem = document.getElementById('menu-login');
-    const newItem = menuItem; // Clone to remove all event listeners
-    menuItem.innerHTML = "Login";
-    menuItem.setAttribute('href', "login");
-    menuItem.replaceWith(newItem);
+    if (isLoggedIn) {
+        setLogout();
+    } else {
+        menuItem.innerHTML = "Login";
+        menuItem.setAttribute('href', "login");
+        menuItem.onclick = null;
+    }
 }
 
 async function logout() {
-    await fetch(`${apiURL}/users/logout`, {
-        method: 'POST',
-        credentials: 'include' // Ensures the cookie is sent with the request
-    });
-    main();
+    await fetch(`${apiURL}/users/logout`, { method: 'POST', credentials: 'include' });
+    localStorage.setItem("isLoggedIn", "false");
+    updateMenu();
 }
 
 async function main() {
+    updateMenu();
     if (await isLoggedIn()) {
-        setLogout();
-    } else {
-        setLogin();
+        updateMenu();
     }
 }
 
 main();
+
+
+// EVENTS
+
+function onLogin() {
+    setLogout();
+}
+
+
+// HELPERS
+
+function setLogout() {
+    menuItem.innerHTML = "Logout";
+    menuItem.setAttribute('href', "");
+    menuItem.onclick = (event) => {
+        event.preventDefault();
+        logout();
+    };
+}

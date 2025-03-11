@@ -1,14 +1,43 @@
 const pool = require("./../db")
 
 class VendorServices {
-    static async getAllVendors(limit = 5, offset = 0, search = "") {
-        const maxLimit = 200;
-        limit = (limit > maxLimit) ? maxLimit : limit;
-        if (search === "")
-            return (await pool.query(query.getAllVendors, [limit, offset])).rows;
-        else {
-            console.log(search)
-            return (await pool.query(query.getAllVendorsWithSearch, [limit, offset, search])).rows;
+    static async getAllVendors(limit = 5, offset = 0, search = "", order) {
+
+        const getOrderSQL = (order) => {
+            switch (order) {
+                case "recent":
+                    return "ORDER BY create_time DESC";
+                case 'oldest':
+                    return "ORDER BY create_time ASC";
+                case 'alphabetic-desc':
+                    return "ORDER BY name DESC";
+                case 'alphabetic-asc':
+                    return "ORDER BY name ASC";
+                default:
+                    console.log("ORDER WAS WRONG NOW WE HAVE TO DEAFULT", order)
+                    return "ORDER BY name DESC"
+            }
+        }
+
+        if (search != "") {
+            const query = `
+                SELECT *
+                FROM vendors
+                WHERE delete_time IS null AND NAME LIKE '%' || $3 || '%'
+                ${getOrderSQL(order)}
+                LIMIT $1 OFFSET $2
+            `;
+
+            return (await pool.query(query, [limit, offset, search])).rows;
+        } else {
+            const query = `
+                SELECT *
+                FROM vendors
+                WHERE delete_time IS null
+                ${getOrderSQL(order)}
+                LIMIT $1 OFFSET $2
+            `;
+            return (await pool.query(query, [limit, offset])).rows;
         }
     }
 
@@ -50,7 +79,6 @@ class query {
         WHERE name LIKE '%' || $3 || '%'
         ORDER BY name
         LIMIT $1 OFFSET $2
-
         `;
     static getVendor = `
         SELECT vendor.create_time, vendor.delete_time, vendor.name, vendor.url, district.name AS district 
