@@ -36,8 +36,16 @@
     </section> -->
 
 
-    <input type="text" placeholder="Search vendors..." id="search-input">
-    <button id="search-submit" onClick="search()">Search</button>
+    <input type="text" placeholder="Search vendors..." id="search-input" onkeypress="searchKeyPress(event)" onkeydown="search()" onchange="search()">
+    <button id="clear-search" onClick="search()">Clear</button>
+
+    <label for="options">Sort on:</label>
+    <select id="options" name="options">
+      <option value="sort-recent">Recent</option>
+      <option value="sort-recent">Oldest</option>
+      <option value="sort-aplhabetic-desc">Alphabetic order A-Ö</option>
+      <option value="sort-aplhabetic-asc">Alphabetic order Ö-A</option>
+    </select>
 
     <section id="all-vendors">
         <h4>All stores A-Ö</h4>
@@ -45,7 +53,6 @@
         </ul>
     </section>
     
-
 
     <script src="script.js"></script>
 </body>

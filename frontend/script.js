@@ -30,7 +30,6 @@ function appendVendor(vendor) {
 }
 
 // appendVendor(getVendorMockData());
-
 async function fetchVendorsFromAPI(limit = 5, offset = 0) {
     const search = getSearch()
     console.log("test", search)
@@ -52,6 +51,18 @@ async function main() {
 
 main();
 
+function searchKeyPress(event) {
+    console.log("test")
+    if (event.key === "Enter" || event.key == "Backspace") {
+        search();
+    }
+}
+
+function clearSearch() {
+    document.getElementById('search-input').value = "";
+    search();
+}
+
 function search() {
 
     const searchInput = document.getElementById('search-input');
@@ -61,7 +72,7 @@ function search() {
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set('search', searchPhrase);
     window.history.replaceState(null, null, "?" + urlParams.toString());
-    
+
     ul.innerHTML = ""
     const li = document.createElement('h3')
     li.textContent = "Showing results for " + searchPhrase

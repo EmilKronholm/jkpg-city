@@ -17,16 +17,21 @@ class VendorServices {
         return (await pool.query(query.getVendor, [id])).rows;
     }
 
-    static async updateVendor(id, url, name, districtFK) {
-        (await pool.query(query.updateVendor, [url, name, districtFK])).rows;
+    static async updateVendor(id, url, name, district) {
+        (await pool.query(query.updateVendor, [id, url, name, district])).rows;
     }
 
     static async createVendor(url, name, district) {
         (await pool.query(query.createVendor, [url, name, district])).rows;
     }
 
+    // This performs a soft delete
     static async deleteVendor(id) {
-        await pool.query(query.createVendor, [id])
+        await pool.query(query.deleteVendor, [id])
+    }
+
+    static async deleteVendorPERMANENTLY(id) {
+        await pool.query(query.deleteVendorPERMANENTLY, [id])
     }
 }
 
@@ -34,11 +39,12 @@ class query {
     static getAllVendors = `
         SELECT *
         FROM vendors
+        WHERE delete_time IS null
         ORDER BY name
         LIMIT $1 OFFSET $2
         `;
 
-        static getAllVendorsWithSearch = `
+    static getAllVendorsWithSearch = `
         SELECT *
         FROM vendors
         WHERE name LIKE '%' || $3 || '%'
@@ -58,7 +64,9 @@ class query {
         SET 
             url = $2,
             name = $3,
-            districtFK = $4
+            districtFK = COALESCE(
+            (SELECT id FROM district WHERE LOWER(name) = LOWER($4))
+        )
         WHERE id = $1 
         `;
 
@@ -66,7 +74,7 @@ class query {
         INSERT INTO vendors
         (create_time, delete_time, name, url, districtFK)
         VALUES
-        (NOW(), null, $1, $2, COALESCE(
+        (NOW(), null, $2, $1, COALESCE(
             (SELECT id FROM district WHERE LOWER(name) = LOWER($3))
         ))
     `;
@@ -75,6 +83,11 @@ class query {
         UPDATE vendors
         SET
             delete_time = NOW()
+        WHERE id = $1
+    `;
+
+    static deleteVendorPERMANENTLY = `
+        DELETE FROM vendors
         WHERE id = $1
     `;
 }

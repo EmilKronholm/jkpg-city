@@ -25,20 +25,26 @@ router.get('/vendors/:id', async (req, res) => {
 
 // Update vendor. ID via query and new field passed via body (json)
 router.put('/vendors/:id', authenticateJWT, async (req, res) => {
-    const { id, url, name, districtFK } = req.body || null;
-    const result = await VendorServices.updateVendor(id, url, name, districtFK);
+    const id = req.params.id
+    const { url, name, district } = req.body || null;
+
+    if (id === undefined) {
+        return res.status(400).json({ message: "No valid id was given." })
+    }
+
+    const result = await VendorServices.updateVendor(id, url, name, district);
     return res.status(200).json(result);
 });
 
 router.post('/vendors', authenticateJWT, async (req, res) => {
-    const { url, name, districtFK } = req.body || null;
+    const { url, name, district } = req.body || null;
 
-    await VendorServices.createVendor(url, name, districtFK);
-    res.status(200).json({ message: "Vendor was created successfully." });  
+    await VendorServices.createVendor(url, name, district);
+    res.status(200).json({ message: "Vendor was created successfully." });
 });
 
 // Delete vendor with id
-router.put('/vendors/:id', authenticateJWT, async (req, res) => {
+router.delete('/vendors/:id', authenticateJWT, async (req, res) => {
     const id = req.params.id
 
     if (id === undefined) {
