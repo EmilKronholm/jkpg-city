@@ -2,7 +2,7 @@
 
 console.log(isLoggedIn)
 
-if (await isLoggedIn()) {
+if (isLoggedIn()) {
     console.log("User is logged in, showing button.");
 }
 
