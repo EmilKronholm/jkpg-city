@@ -132,13 +132,13 @@ document.getElementById('close-edit-vendor-button').addEventListener('click', ()
     document.getElementById('overlay').style.display = "none";
 });
 
-document.getElementById('delete-vendor-button').addEventListener('click', () => {
+document.getElementById('delete-vendor-button').addEventListener('click', async () => {
+    
     const response = await fetch(`${apiURL}/vendors/${getID()}`, {
-        method: 'PUT',
+        method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
         credentials: 'include'
     });
 

@@ -48,7 +48,7 @@ const createVendors = () => {
             console.log(vendor)
         }
 
-        await pool.query(`INSERT INTO vendors (name, url, districtFK, score, adress) values
+        await pool.query(`INSERT INTO vendors (name, url, districtFK, score, address) values
         ($1, $2, $3, $4, $5)`, [name, url, districtFK, score, address]);
     });
 }
