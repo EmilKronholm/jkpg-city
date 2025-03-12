@@ -1,0 +1,975 @@
+[
+  {
+    "name": "Åhlens",
+    "url": "ahlens.se/varuhus/jonkoping?utm_source=google&utm_medium=organic&utm_campaign=business_profile&utm_content=website_link",
+    "district": "Öster",
+    "grade": 4.8,
+    "address": "Östra Storgatan 10, 553 21 Jönköping"
+  },
+  {
+    "name": "Akademibokhandeln",
+    "url": "akademibokhandeln.se/butik/jonkoping-c",
+    "district": "Öster",
+    "grade": 4.1,
+    "address": "Lantmätargränd 59, 553 20 Jönköping"
+  },
+  {
+    "name": "Apoteket AB",
+    "url": "apoteket.se/apotek/apoteket-ostra-storgatan-jonkoping/",
+    "district": null,
+    "grade": 4.6,
+    "address": "Östra Storgatan 27, 553 21 Jönköping"
+  },
+  {
+    "name": "Apotek Hjärtat",
+    "url": "apotekhjartat.se/hitta-apotek-hjartat/jonkoping/apotek_hjartat_smedjegatan_2_jonkoping/",
+    "district": null,
+    "grade": 3.8,
+    "address": "Smedjegatan 2, 553 20 Jönköping"
+  },
+  {
+    "name": "Ashur Brud & Fest - Skrädderi",
+    "url": "facebook.com/AshuraitaBrudFest/",
+    "district": null,
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Asia livs, servicebutik",
+    "url": "facebook.com/profile.php?id=100051215441977",
+    "district": null,
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Ateljé Creativ i Jönköping/Finrummet",
+    "url": "/finrummet.net",
+    "district": "Väster",
+    "grade": 3.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Ateljé KEG",
+    "url": "ateljekeg.se",
+    "district": "Öster",
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Atlantis Dive College",
+    "url": "atlantis.se",
+    "district": "Väster",
+    "grade": 4.2,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Bagelle väskboutique",
+    "url": null,
+    "district": null,
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Balance Ljud och Bild",
+    "url": "balance.se",
+    "district": null,
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "BGA Fotocenter",
+    "url": "bgafotocenter.se/jonkoping/",
+    "district": "Öster",
+    "grade": 3.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Bikupan",
+    "url": "bikupan.org",
+    "district": "Tändsticksområdet",
+    "grade": 3.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Blankdays",
+    "url": "https://blankdays.com/collections/all-products?gclid=CjwKCAjwov6hBhBsEiwAvrvN6EZZ1PsnlSJhnE7bmxINtl0Y0noU3rvCybdt217CGd3-bqMdx3mYRxoCK5EQAvD_BwE",
+    "district": "Tändsticksområdet",
+    "grade": 3.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Boardlife",
+    "url": "boardlife.se",
+    "district": "Väster",
+    "grade": 4.2,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Borgs skor",
+    "url": "borgsskor.se/kontakt",
+    "district": "Öster",
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Boutique Lykka",
+    "url": "boutiquelykka.se",
+    "district": "Öster",
+    "grade": 3.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Broder Bläck",
+    "url": "facebook.com/broderblacktatuering/",
+    "district": "Öster",
+    "grade": 3.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Buketten",
+    "url": "instagram.com/bukettenjonkoping/?hl=sv",
+    "district": "Öster",
+    "grade": 3.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Busfrö Nytt & Bytt",
+    "url": "busfro.se",
+    "district": "Öster",
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Butiken Noga Utvalt",
+    "url": "butikenjkpg.se",
+    "district": "Atollen",
+    "grade": 4.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Carlings",
+    "url": "carlings.com/sv/corporate/Butiker/sweden/58f/",
+    "district": "Öster",
+    "grade": 4.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Casa Souk",
+    "url": "casasouk.se",
+    "district": "Väster",
+    "grade": 4.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Cervera",
+    "url": "cervera.se/hitta-butik/",
+    "district": "Öster",
+    "grade": 4.8,
+    "address": "Östra Storgatan 8, 553 21 Jönköping"
+  },
+  {
+    "name": "Clas Ohlson",
+    "url": "clasohlson.com/se/store-finder?q=J%C3%B6nk%C3%B6ping,%20City&latitude=57.78252&longitude=14.17347&source=search",
+    "district": "Öster",
+    "grade": 4.5,
+    "address": "Asecs, Kompanigatan 36, 553 05 Jönköping"
+  },
+  {
+    "name": "Coop Atollen",
+    "url": "coop.se/butiker-erbjudanden/coop/coop-atollen-jonkoping/",
+    "district": "Atollen",
+    "grade": 4.5,
+    "address": "Lillsjöraden 4, 553 20 Jönköping"
+  },
+  {
+    "name": "Coop Östra Torget",
+    "url": "coop.se/butiker-erbjudanden/coop/coop-ostra-torget/",
+    "district": "Öster",
+    "grade": 4.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Copenhagen Luxe",
+    "url": "https://copenhagenluxe.dk/",
+    "district": "Öster",
+    "grade": 3.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Day fotografi",
+    "url": "dayfotografi.se/",
+    "district": null,
+    "grade": 4.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Dinos kemtvätt",
+    "url": "dinos.nu",
+    "district": "Väster",
+    "grade": 3.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Din Sko",
+    "url": "dinsko.se/stores",
+    "district": "Öster",
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Direkt optik",
+    "url": "https://www.direktoptik.se/butiker/jonkoping/ostra-storgatan-29/",
+    "district": null,
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Dressman",
+    "url": "dressmann.com/no/bedriftssider/finn-butikk/Sweden/Dressmann_Jonkoping/",
+    "district": "Öster",
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Elias Urmästare",
+    "url": "facebook.com/profile.php?id=100064073112753",
+    "district": null,
+    "grade": 4.2,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Engströms Urmakeri",
+    "url": "engstromsurmakeri.se",
+    "district": null,
+    "grade": 4.3,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Euroex",
+    "url": null,
+    "district": null,
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Evoke industry",
+    "url": null,
+    "district": null,
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Fabriken",
+    "url": "butikfabriken.se",
+    "district": "Atollen",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Fiction Prescription",
+    "url": "https://www.instagram.com/fiction.prescription.jonkoping/",
+    "district": null,
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Forex Bank Väster",
+    "url": null,
+    "district": "Väster",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Foten",
+    "url": "https://www.foten.se/",
+    "district": null,
+    "grade": 4.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Friendly Corner",
+    "url": "https://friendlycorner.se/butiken",
+    "district": "Tändsticksområdet",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Galleri 701 ramcenter",
+    "url": "galleri701-ram.se",
+    "district": null,
+    "grade": 3.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Gant",
+    "url": "gant.se/stores?lat=57.78261370000001&long=14.1617876&postalCode=j%C3%B6nk%C3%B6ping&radius=10.0",
+    "district": "Atollen",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Gåvan",
+    "url": "gavanjonkoping.se",
+    "district": "Öster",
+    "grade": 4.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Gina Tricot",
+    "url": "ginatricot.com/se/find-store",
+    "district": "Öster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Go Banana",
+    "url": "gobanana.se",
+    "district": "Väster",
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Godis och Tobakshörnan",
+    "url": null,
+    "district": "Öster",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Golden athlete",
+    "url": "goldenathlete.se/sv/butiker-2",
+    "district": "Öster",
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Grmawit Store",
+    "url": "grmawit.com/",
+    "district": "Väster",
+    "grade": 4.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Guldsmedjan Snarberg",
+    "url": "guldsmedjan-snarberg.se",
+    "district": "Väster",
+    "grade": 3.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Hälsokraft",
+    "url": "halsokraft.se/butiker?butik=503",
+    "district": "Öster",
+    "grade": 3.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Hemköp",
+    "url": "hemkop.se/butik/4674",
+    "district": "Väster",
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Hemmakväll",
+    "url": "hemmakvall.se/hitta-butik/",
+    "district": "Öster",
+    "grade": 4.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Hemtex",
+    "url": "hemtex.se/hitta-butik/jonkoping",
+    "district": "Öster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Hi-fi Klubben",
+    "url": "hifiklubben.se/hitta-butik/jonkoping/?gclid=Cj0KCQjwhsmaBhCvARIsAIbEbH4w2ngSDzygBKQSqHVzCSFAplyrpByCMojT6dfo-Xnjcn7P9j_jBn8aAsD0EALw_wcB",
+    "district": "Väster",
+    "grade": 4.3,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "H&M",
+    "url": "hm.com/sv_se/customer-service/shoppa-pa-hm/store-locator",
+    "district": "Öster",
+    "grade": 4.9,
+    "address": "Östra Storgatan 5, 553 21 Jönköping"
+  },
+  {
+    "name": "H&M Home",
+    "url": "hm.com/sv_se/customer-service/shoppa-pa-hm/store-locator",
+    "district": "Öster",
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Indiska",
+    "url": "indiska.com/se/butiker",
+    "district": "Öster",
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Jeansshoppen",
+    "url": "jeansshopen.se/sv/kontakt",
+    "district": "Öster",
+    "grade": 3.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "JL Sycenter",
+    "url": "jlsycenter.se/kontakta-oss/",
+    "district": null,
+    "grade": 4.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Jönköpings antik och konsthandel",
+    "url": null,
+    "district": "Väster",
+    "grade": 3.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Jönköpings Cigrarrimport",
+    "url": "atg.se/jonkopingscigarrimport",
+    "district": null,
+    "grade": 4.2,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "KappAhl",
+    "url": "www.kappahl.com/sv-SE/kundservice/kundservice/hitta-butik/",
+    "district": "Öster",
+    "grade": 4.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Karin Lund Design",
+    "url": "facebook.com/karinlunddesign/",
+    "district": null,
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Katrin Bååths Ateljé",
+    "url": "https://katrinbaath.se/ateljen/",
+    "district": "Tändsticksområdet",
+    "grade": 4.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Kicks",
+    "url": "kicks.se/butiker/jonkoping-smedjegatan",
+    "district": "Öster",
+    "grade": 4.6,
+    "address": "Smedjegatan 13, 553 20 Jönköping"
+  },
+  {
+    "name": "Kjell & Company",
+    "url": "kjell.com/se/butiker/sodra-strandgatan-5",
+    "district": "Öster",
+    "grade": 5.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Klädscoopet",
+    "url": "facebook.com/Kladscoopet/",
+    "district": "Öster",
+    "grade": 4.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "KOiJ Konsthantverk",
+    "url": "koij.se",
+    "district": "Öster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Kristina Brud & Fest",
+    "url": "kristinabrud-fest.se",
+    "district": "Väster",
+    "grade": 4.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Kronans Apotek Atollen",
+    "url": "apoteksinfo.nu/apotek/kronans_apotek_atollen_j%C3%B6nk%C3%B6ping-1415",
+    "district": "Atollen",
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Kvänum Kök",
+    "url": "kvanum.com/se/showrooms/jonkoping/",
+    "district": "Öster",
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Lagerhaus",
+    "url": "lagerhaus.se/stores",
+    "district": "Öster",
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Lavér Studio",
+    "url": "laverstudio.com/",
+    "district": null,
+    "grade": 4.2,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Life Naturlig Hälsa",
+    "url": "https://www.lifebutiken.se/stores",
+    "district": "Väster",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Lilla Violen",
+    "url": "lillaviolen.com/",
+    "district": "Väster",
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Lindex",
+    "url": "lindex.com/se/hitta-din-butik?location=57.756066%2C14.188254&storeId=002&zoom=11",
+    "district": "Öster",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Livspotential Kroppsterapi",
+    "url": "facebook.com/Livspotential/",
+    "district": null,
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Lloyd Tabing Art Gallery",
+    "url": "lloydtabingart.com/",
+    "district": "Tändsticksområdet",
+    "grade": 3.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Macforum",
+    "url": "macforum.se/butiker/forum-jonkoping",
+    "district": "Öster",
+    "grade": 5.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "MarQet",
+    "url": "mq.se/butiker/?gclid=Cj0KCQjwteOaBhDuARIsADBqRejM-U3YQY9vh4F6gSXC2LnJWPVGKJ7CGfiCl1tYkREGUR37cTWMNcoaAjFGEALw_wcB",
+    "district": "Öster",
+    "grade": 3.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Mimosa City",
+    "url": "mimosacity.se",
+    "district": null,
+    "grade": 4.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Moderna Smycken",
+    "url": "klockorochsmycken.se/",
+    "district": "Öster",
+    "grade": 4.3,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Naturkompaniet",
+    "url": "murphysbar.se/sv/",
+    "district": "Öster",
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Newhouse",
+    "url": "newhouse.se/newhouse/vara-butiker",
+    "district": "Atollen",
+    "grade": 4.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "New Yorker",
+    "url": "newyorker.de/se/stores/",
+    "district": "Öster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Nilson Shoes",
+    "url": "dinsko.se/stores",
+    "district": "Öster",
+    "grade": 4.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Noa Noa",
+    "url": "httpsfacebook.com/Noa-Noa-J%C3%B6nk%C3%B6ping-446212958766553/",
+    "district": "Öster",
+    "grade": 3.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Nordisk Möbelkonst",
+    "url": "nordiskmobelkonst.se/",
+    "district": "Öster",
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Normal",
+    "url": "normal.se/hitta-butik/",
+    "district": "Öster",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Nya Musik",
+    "url": "nyamusik.se/",
+    "district": "Väster",
+    "grade": 4.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Once for girls",
+    "url": "oncestore.se/",
+    "district": "Öster",
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Önska",
+    "url": "onska.se/vara-butiker/",
+    "district": "Öster",
+    "grade": 3.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Optiker Jahnke",
+    "url": "jahnke.se/",
+    "district": "Öster",
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Optiker Ullström",
+    "url": "optikerullstrom.se/",
+    "district": "Väster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Optik & Form",
+    "url": "optikochform.se/",
+    "district": null,
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Partyland",
+    "url": "partyland.party/butiker/",
+    "district": "Väster",
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Planta Blommor",
+    "url": "plantablommor.se/?gclid=Cj0KCQjwteOaBhDuARIsADBqRehsWXSRNHjeGnPn_AyambJZLmNntWxsMnUkANIHdme0NoDtc2Xi8mgaAicoEALw_wcB#.Y2p1tuzMLPZ",
+    "district": "Väster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Pleasure erotic shop",
+    "url": "pleasureeroticshop.se/",
+    "district": "Väster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "PMU Second Hand Jönköping City",
+    "url": "pmu.se/stores/jonkopingcity/",
+    "district": "Öster",
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Pressbyrån Östra storgatan",
+    "url": "pressbyran.se/kontakt/hitta-butik/",
+    "district": "Öster",
+    "grade": 5.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Pressbyrån Resecentrum",
+    "url": "pressbyran.se/kontakt/hitta-butik/",
+    "district": "Resecentrum",
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Pressbyrån Väster",
+    "url": "pressbyran.se/kontakt/hitta-butik/",
+    "district": "Väster",
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Rabalder",
+    "url": "publik.rabalder.se/butiker/joenkoeping.aspx",
+    "district": "Öster",
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Resehuset",
+    "url": "resehuset.se/",
+    "district": "Väster",
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Rituals",
+    "url": "rituals.com/sv-se/store-detail?store=J%C3%B6nk%C3%B6ping-%C3%96stra-Storgatan",
+    "district": "Öster",
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Rizzo",
+    "url": "rizzo.se/stores/",
+    "district": "Öster",
+    "grade": 4.2,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Röda Korset Second Hand ",
+    "url": "rodakorset.se/vad-vi-gor/second-hand/butiker/roda-korset-secondhand-jonkoping/?gclid=CjwKCAjwzY2bBhB6EiwAPpUpZvHzKjPuEJP8mzdhkuZYuEUoinVduEX8lEL6C0cnHq-JkG5o4XalYBoCwX8QAvD_BwE",
+    "district": "Väster",
+    "grade": 4.2,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Rundquist & Zälle",
+    "url": "rundquist-zalle.com",
+    "district": "Väster",
+    "grade": 3.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Säfvers Tobak",
+    "url": "facebook.com/people/S%C3%A4fvers-tobak/100049803762896/",
+    "district": null,
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "SåIniNordeN",
+    "url": "saininorden.se/",
+    "district": "Öster",
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Sandströms",
+    "url": "sandstroms.nu/butiker/sandstroms-jonkoping",
+    "district": "Öster",
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Sarabello",
+    "url": "facebook.com/people/SARABELLO/100054240470073/",
+    "district": "Öster",
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Saumas sko & nyckelservice",
+    "url": "saumasskoochnyckelservice.heymo.se/",
+    "district": null,
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Sjöqvists skomakeri",
+    "url": "sjoqvistskomakeri.se/",
+    "district": "Väster",
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Smålands Skinnmanufaktur",
+    "url": "smalandsskinnmanufaktur.se/",
+    "district": "Tändsticksområdet",
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Smarteyes",
+    "url": "smarteyes.se/butiker/jonkoping",
+    "district": null,
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Smycka Guld",
+    "url": "smycka.se/store/19",
+    "district": null,
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Smycket",
+    "url": "smycketjonkoping.se/",
+    "district": null,
+    "grade": 3.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Specsavers",
+    "url": "httpspecsavers.se/hitta-till-din-butik/jonkoping-city?utm_source=google&utm_medium=organic&utm_campaign=gmb-website&utm_content=jonkoping&y_source=1_NDA4Nzk2NjQtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "district": null,
+    "grade": 4.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Stagelight",
+    "url": "stagelight.se/",
+    "district": null,
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Stil",
+    "url": "stilbutikerna.se/",
+    "district": "Öster",
+    "grade": 4.0,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Story",
+    "url": "storyjkpg.se",
+    "district": "Atollen",
+    "grade": 4.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "SunOff",
+    "url": "sunoff.se/butiker/jonkoping?gclid=CjwKCAjw8JKbBhBYEiwAs3sxNy3EnUFGceeFxyJN35fymdpsg5qEWUTPj6Sx0TbNoLdwp8E6AI-I5xoC45gQAvD_BwE",
+    "district": "Väster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Synoptik",
+    "url": "httpsynoptik.se/butiker/jonkoping/jonkoping-ostra-storgatan5?utm_campaign=gmb-website&utm_source=google&utm_medium=organic&utm_content=667-Jonkoping-Ostra-Storgatan-5",
+    "district": null,
+    "grade": 3.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Synsam Jönköping Öster",
+    "url": "synsam.se/optiker/synsam-j%C3%B6nk%C3%B6ping-%C3%B6ster/128",
+    "district": "Öster",
+    "grade": 3.8,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Synsam Jönköping Väster",
+    "url": "synsam.se/optiker/synsam-j%C3%B6nk%C3%B6ping-v%C3%A4ster/125",
+    "district": "Väster",
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Systembolaget",
+    "url": "systembolaget.se/butiker-ombud/",
+    "district": "Öster",
+    "grade": 4.7,
+    "address": "Östra Storgatan 28, 553 21 Jönköping"
+  },
+  {
+    "name": "The Body Shop",
+    "url": "thebodyshop.com/sv-se/store-details/jonkoping-smedjegatan/3801?utm_source=google&utm_medium=organic-local&utm_campaign=yext&utm_content=3801",
+    "district": "Öster",
+    "grade": 4.4,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Ticket",
+    "url": "ticket.se/resebutiker/jonkoping.html",
+    "district": null,
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Twilfit",
+    "url": "shop.change.com/sv-SE",
+    "district": "Öster",
+    "grade": 4.2,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Ur & Penn",
+    "url": "uropenn.se/hitta-butik/",
+    "district": "Öster",
+    "grade": 4.5,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Västanhem Butik",
+    "url": "vastanhem.se",
+    "district": "Väster",
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Västra klackbaren",
+    "url": null,
+    "district": null,
+    "grade": 4.9,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Vätterbygden Ankarbergs Begravningsbyrå",
+    "url": "ankarbergs.se/",
+    "district": null,
+    "grade": 3.6,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Vätterfisk",
+    "url": "xn--vtterfisk-v2a.se/",
+    "district": "Väster",
+    "grade": 4.7,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Yxhage Lås och Larm",
+    "url": "yxhage.se/",
+    "district": null,
+    "grade": 4.1,
+    "address": "Unknown Address"
+  },
+  {
+    "name": "Zephyr Tattoo Parlour",
+    "url": "zephyrtattoo.se",
+    "district": "Öster",
+    "grade": 4.3,
+    "address": "Unknown Address"
+  }
+]
