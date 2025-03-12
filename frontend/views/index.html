@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKPG City</title>
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/footer-style.css">
+    <link rel="stylesheet" href="../style/index-style.css">
+</head>
+
+<body>
+    <header>
+        <menu>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="all-stores">All stores A-Ö</a></li>
+                <li><a href="admin/secret">Protected route (TEST)</a></li>
+                <li><a id="menu-login" href="login">Login</a></li>
+            </ul>
+        </menu>
+
+        <section>
+            <h2>A complete list of vendors</h2>
+            <h1>Jönköping City</h1>
+            <h3>An unofficial project by Emil Kronholm</h3>
+        </section>
+    </header>
+
+    <div id="text-section-area">
+        <div>
+            <section class="text-section">
+                <h4>Welcome to Jönköping City!</h4>
+                <p>This website was created by Emil Kronholm as a school project for the great course
+                    Web Development - Advanced Concepts, held by Patrick Riehmann at JTH in Jönköping.
+                    The course focuses on theoretical in depth concepts such as web history, cookies, event propagation and rendering.
+                    And combined we will also work with low-level native technologies (e.g. no frontend frameworks, just using DOM-manipulation).
+                    <br>
+                    <br>
+                    This website is static and is completely rendered on client side using REST-API (with JWT
+                    authentication) for dynamic content.
+                    <br>
+                    <br>
+                    The webserver is static and hosted with nginx. It's optimized for static websites, event-driven and
+                    as a result; extremely fast.
+                    And by custom config, we can still have protected routes with built in authentication.
+                    We can also very easily structure our project however we'd like (e.g. using seperate folders and subfolders for HTML/CSS-files,
+                    which isn't always straight forward on static webservers) using the try_files keyword.
+                    <br>
+                    <br>
+                    We're only using CSR for dynamic content (a requirement for the course) which honestly I've
+                    had a bad experience with during this project. Although it has it's use cases,
+                    I feel like development is just slower and more messy. This means however i will always appreciate
+                    frameworks/tools much more in future 😉
+
+                    <br>
+                    <br>
+                    The backend is a REST-API built with node.js and express combined with the best database engine
+                    postgreSQL.
+                    We are again working modular, splitting sub-apps into routers, and using dedicated services to complete
+                    low-level database logic (if you can call pg low-level 😅).
+                    <br>
+                    <br>
+                    What I have taken away from this project:<br>
+                    - Complex Native DOM-manipulation is slow to develop (should be avoided?) <br>
+                    - For any serious project, consider not writing SQL statements in JS strings 🎉<br>
+                    - Always try to think twice before taking a shortcut 🫡<br>
+                    - Nginx is an amazing technology 👌<br>
+
+                </p>
+            </section>
+
+            <section class="text-section">
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>This project was created by Emil Kronholm as part of an advanced web development course at JTH.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="all-stores">All Stores</a></li>
+                    <li><a href="login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email-1: emil.kronholm@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Emil Kronholm | Jönköping City Project</p>
+        </div>
+    </footer>
+    
+    <link rel="stylesheet" href="../style/footer-style.css">
+
+
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/isLoggedIn.js"></script>
+</body>
+
+</html>

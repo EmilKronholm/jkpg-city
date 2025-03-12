@@ -68,7 +68,6 @@ function search() {
     // Get search input
     const searchInput = document.getElementById('search-input');
     const searchPhrase = searchInput.value;
-    search.value = "";
 
     // Update URL params
     const urlParams = new URLSearchParams(window.location.search);
@@ -85,6 +84,11 @@ function search() {
 
     // Build vendors
     main();
+}
+
+function searchClear() {
+    document.getElementById('search-input').value = "";
+    search();
 }
 
 document.getElementById('options').addEventListener('change', (event) => {

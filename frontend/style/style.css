@@ -15,7 +15,7 @@ header {
     height: 60vh;
 
     background: linear-gradient(rgba(215, 131, 131, 0.5), rgba(0, 0, 0, 0.5)),
-        url("./images/jkpg-city-sky.jpg");
+        url("../images/jkpg-city-sky.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10%;
@@ -70,21 +70,6 @@ header section h3 {
 
 
 /* VENDOR STYLE */
-#popup {
-    padding: 30px;
-    background-color: rgb(219, 180, 132);
-    width: 50vh;
-}
-
-#updateForm input {
-    margin-bottom: 5px;
-    padding: 5px;
-}
-
-#updateForm input {
-    margin-bottom: 5px;
-    padding: 5px;
-}
 
 /* Background overlay */
 #overlay {
@@ -95,7 +80,7 @@ header section h3 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
     z-index: 999;
 }
 
@@ -105,48 +90,76 @@ header section h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 40vw;
+    max-width: 400px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-#content {
-    padding: 10px;
+/* Close button */
+#close-edit-vendor-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #333;
+    transition: color 0.2s;
+}
+
+#close-edit-vendor-button:hover {
+    color: #888888;
+}
+
+/* Form styling */
+#updateForm {
     display: flex;
-    flex-direction: column; /* Keeps items in a vertical layout */
-    align-items: center; /* Centers content horizontally */
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-#content #conten-menu {
-    display: inline-block;
-    margin-bottom: 305px;
+#updateForm label {
+    font-weight: bold;
+    text-align: left;
 }
 
-#content #all-vendors {
-    padding-top: 15px;
-    padding-left: 10%;
-    padding-right: 10%;
+#updateForm input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #cccccc7e;
+    border-radius: 5px;
+    width: 100%;
 }
 
-li a {
-    color: black;
-    text-decoration: none;
+#updateForm button {
+    background: #e6b361;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-#all-vendors ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    padding-bottom: 20px;
-    row-gap: 40px;
+#updateForm button:hover {
+    background: #ac7824;
 }
 
-#all-vendors ul a:hover {
-    color: rgb(152, 152, 152);
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

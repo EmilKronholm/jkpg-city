@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKPG City</title>
+
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/vendor-style.css">
+    <link rel="stylesheet" href="../style/footer-style.css">
+</head>
+
+<body>
+    <header>
+        <menu>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="all-stores">All stores A-Ö</a></li>
+                <li><a href="admin/secret">Protected route (TEST)</a></li>
+                <li><a id="menu-login" href="login">Login</a></li>
+            </ul>
+        </menu>
+
+        <section>
+            <h2>A complete list of vendors</h2>
+            <h1>Jönköping City</h1>
+            <h3>An unofficial project by Emil Kronholm</h3>
+        </section>
+    </header>
+
+    <!-- <section>
+        <h4>Welcome to Jönköping City!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.</p>
+    </section> -->
+
+    <div id="vendor-content">
+        <section id="vendor">
+            <!-- <div>
+            <h2>Sample vendor name</h2>
+            <a href="http://example.com">Offical website</a>
+            <p>Sample district</p>
+        </div> -->
+        </section>
+        <button id="edit-vendor-button">Edit Vendor ✏️</button>
+        <button id="delete-vendor-button">Delete Vendor ❌</button>
+    </div>
+
+    <!-- Initialized as none, later this will act as a popup. -->
+    <div id="overlay">
+        <div id="popup">
+            <button id="close-edit-vendor-button">Close</button>
+            <h2>Update Vendor</h2>
+            <form id="updateForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="" required><br>
+
+                <label for="url">URL:</label>
+                <input type="text" id="url" name="url" value="" required><br>
+
+                <label for="districtfk">District:</label>
+                <input type="text" id="districtfk" name="districtfk"><br>
+
+                <label for="url">Stars:</label>
+                <input type="number" id="stars" name="url" value="" required><br>
+
+                <label for="url">Addres:</label>
+                <input type="text" id="address" name="url" value="" required><br>
+
+                <button type="submit">Update Vendor</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>This project was created by Emil Kronholm as part of an advanced web development course at JTH.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="all-stores">All Stores</a></li>
+                    <li><a href="login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email-1: emil.kronholm@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Emil Kronholm | Jönköping City Project</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/isLoggedIn.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/vendor-script.js"></script>
+</body>
+
+</html>

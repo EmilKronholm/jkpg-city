@@ -5,7 +5,7 @@ const { rawListeners } = require("process");
 const { json } = require("stream/consumers");
 const { create } = require("domain");
 
-const data = fs.readFileSync('./src/data.json')
+const data = fs.readFileSync('./src/updated_data.json')
 const jsonData = JSON.parse(data);
 
 const pool = new Pool({
@@ -28,7 +28,7 @@ const createTags = () => {
     uniqueTags.forEach((x) => {
         if (!x) return;
         console.log(`${x}`)
-        pool.query(`INSERT INTO district (create_time, name) VALUES (NOW(), $1)`, [x]);
+        pool.query(`INSERT INTO district (create_time, name) VALUES (CURRENT_TIMESTAMP, $1)`, [x]);
     });
 };
 
@@ -39,14 +39,17 @@ const createVendors = () => {
         console.log(vendor)
         const name = vendor.name
         const url = vendor.url
+        const score = vendor.grade
+        const address = vendor.address
+
         let districtFK = uniqueTags.indexOf(vendor.district) + 1;
         districtFK = (districtFK == 0) ? null : districtFK;
         if (districtFK == null) {
             console.log(vendor)
         }
 
-        await pool.query(`INSERT INTO vendors (name, url, districtFK) values
-        ($1, $2, $3)`, [name, url, districtFK]);
+        await pool.query(`INSERT INTO vendors (name, url, districtFK, score, adress) values
+        ($1, $2, $3, $4, $5)`, [name, url, districtFK, score, address]);
     });
 }
 // createTags();

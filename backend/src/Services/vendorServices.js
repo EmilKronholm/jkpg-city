@@ -23,7 +23,7 @@ class VendorServices {
             const query = `
                 SELECT *
                 FROM vendors
-                WHERE delete_time IS null AND NAME LIKE '%' || $3 || '%'
+                WHERE delete_time IS null AND NAME ILIKE '%' || $3 || '%'
                 ${getOrderSQL(order)}
                 LIMIT $1 OFFSET $2
             `;
@@ -46,12 +46,12 @@ class VendorServices {
         return (await pool.query(query.getVendor, [id])).rows;
     }
 
-    static async updateVendor(id, url, name, district) {
-        (await pool.query(query.updateVendor, [id, url, name, district])).rows;
+    static async updateVendor(id, url, name, district, score, address) {
+        (await pool.query(query.updateVendor, [id, url, name, district, score, address])).rows;
     }
 
-    static async createVendor(url, name, district) {
-        (await pool.query(query.createVendor, [url, name, district])).rows;
+    static async createVendor(url, name, district, score, address) {
+        (await pool.query(query.createVendor, [url, name, district, score, address])).rows;
     }
 
     // This performs a soft delete
@@ -59,6 +59,7 @@ class VendorServices {
         await pool.query(query.deleteVendor, [id])
     }
 
+    // This performs a true delete
     static async deleteVendorPERMANENTLY(id) {
         await pool.query(query.deleteVendorPERMANENTLY, [id])
     }
@@ -81,7 +82,14 @@ class query {
         LIMIT $1 OFFSET $2
         `;
     static getVendor = `
-        SELECT vendor.create_time, vendor.delete_time, vendor.name, vendor.url, district.name AS district 
+        SELECT 
+            vendor.create_time, 
+            vendor.delete_time, 
+            vendor.name, 
+            vendor.url,  
+            vendor.score,
+            vendor.address,
+            district.name AS district 
         FROM vendors AS vendor 
         LEFT JOIN district ON vendor.districtfk = district.id
         WHERE vendor.id = $1
@@ -92,17 +100,18 @@ class query {
         SET 
             url = $2,
             name = $3,
+            score = $5,
+            address = $6,
             districtFK = COALESCE(
-            (SELECT id FROM district WHERE LOWER(name) = LOWER($4))
-        )
+            (SELECT id FROM district WHERE LOWER(name) = LOWER($4)))
         WHERE id = $1 
         `;
 
     static createVendor = `
         INSERT INTO vendors
-        (create_time, delete_time, name, url, districtFK)
+        (create_time, delete_time, name, url, score, address, districtFK)
         VALUES
-        (NOW(), null, $2, $1, COALESCE(
+        (CURRENT_TIMESTAMP, null, $2, $1, $4, $5, COALESCE(
             (SELECT id FROM district WHERE LOWER(name) = LOWER($3))
         ))
     `;
@@ -110,7 +119,7 @@ class query {
     static deleteVendor = `
         UPDATE vendors
         SET
-            delete_time = NOW()
+            delete_time = CURRENT_TIMESTAMP
         WHERE id = $1
     `;
 

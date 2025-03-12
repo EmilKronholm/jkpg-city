@@ -53,7 +53,7 @@ class query {
     static createNewUser = `
         INSERT INTO users
         (create_time, username, password)
-        VALUES (NOW(), $1, $2)        
+        VALUES (CURRENT_TIMESTAMP, $1, $2)        
         `;
 }
 

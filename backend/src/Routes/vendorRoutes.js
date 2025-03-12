@@ -27,13 +27,15 @@ router.get('/vendors/:id', async (req, res) => {
 // Update vendor. ID via query and new field passed via body (json)
 router.put('/vendors/:id', authenticateJWT, async (req, res) => {
     const id = req.params.id
-    const { url, name, district } = req.body || null;
+    const { url, name, district, score, address } = req.body || null;
+
+    console.log(url, name, district, score, address)
 
     if (id === undefined) {
         return res.status(400).json({ message: "No valid id was given." })
     }
 
-    const result = await VendorServices.updateVendor(id, url, name, district);
+    const result = await VendorServices.updateVendor(id, url, name, district, score, address);
     return res.status(200).json(result);
 });
 

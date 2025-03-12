@@ -1,0 +1,110 @@
+#content-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+#content-menu input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 250px;
+    transition: border-color 0.3s ease;
+}
+
+#content-menu input:focus {
+    border-color: #da9c69;
+    outline: none;
+}
+
+#content-menu button {
+    /* background-color: #ca8d5b; */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#search {
+    background-color: #ca8d5b;
+}
+
+#search:hover {
+    background-color: #6f4d31;
+}
+
+#clearSearch {
+    background-color: #ae4038;
+}
+
+#clearSearch:hover {
+    background-color: #6d251f;
+}
+
+#content-menu select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+#content-menu select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#content-menu label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#content-menu #create-vendor-button {
+    display: none;
+    background-color: #28a745;
+}
+
+#content-menu #create-vendor-button:hover {
+    background-color: #218838;
+}
+
+#content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+#content #conten-menu {
+    display: inline-block;
+    margin-bottom: 305px;
+}
+
+#content #all-vendors {
+    padding-top: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+#all-vendors ul {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+#all-vendors ul a:hover {
+    color: rgb(152, 152, 152);
+}

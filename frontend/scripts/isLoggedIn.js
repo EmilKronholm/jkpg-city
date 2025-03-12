@@ -33,14 +33,14 @@ async function logout() {
     updateMenu();
 }
 
-async function main() {
+async function mainLoggedIn() {
     updateMenu();
     if (await isLoggedIn()) {
         updateMenu();
     }
 }
 
-main();
+mainLoggedIn();
 
 
 // EVENTS
